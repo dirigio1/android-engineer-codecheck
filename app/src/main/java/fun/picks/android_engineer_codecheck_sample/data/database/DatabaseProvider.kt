@@ -8,7 +8,7 @@ class DatabaseProvider(application: Application) {
         application,
         AppDatabase::class.java,
         "codecheck-sample-database"
-    )
+    ).build()
 
     fun get() = database
 }
