@@ -25,6 +25,10 @@ class HomeCreateViewModel(
     val descriptionErrorLD: LiveData<Boolean>
         get() = _descriptionErrorLD
 
+    private val _createSuccessLD = MutableLiveData<Boolean>()
+    val createSuccessLD: LiveData<Boolean>
+        get() = _createSuccessLD
+
     fun onClickCreateButton(
         titleText: String,
         descriptionText: String
@@ -43,6 +47,7 @@ class HomeCreateViewModel(
                 )
 
                 memoRepository.insertAllMemo(memo)
+                _createSuccessLD.value = true
             }.onFailure {
                 _errorLD.value = R.string.error_occurred
             }
