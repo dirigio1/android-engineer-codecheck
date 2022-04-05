@@ -3,6 +3,7 @@ package `fun`.picks.android_engineer_codecheck_sample.ui.home.list
 import `fun`.picks.android_engineer_codecheck_sample.R
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
+import `fun`.picks.android_engineer_codecheck_sample.ui.home.util.ViewModelFactory
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.PRIVATE
 import androidx.lifecycle.LiveData
@@ -38,5 +39,11 @@ class HomeListViewModel(
     sealed class HomeListUiModel {
         data class MemoItem(val memos: List<Memo>) : HomeListUiModel()
         object Loading : HomeListUiModel()
+    }
+
+    class HomeListViewModelFactory(
+        private val memoRepository: MemoRepository
+    ) : ViewModelFactory<HomeListViewModel> {
+        override fun create() = HomeListViewModel(memoRepository)
     }
 }
