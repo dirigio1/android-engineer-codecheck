@@ -56,4 +56,7 @@ dependencies {
 
     def coroutine = "1.6.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine"
+
+    def lifecycle = "2.4.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
 }
