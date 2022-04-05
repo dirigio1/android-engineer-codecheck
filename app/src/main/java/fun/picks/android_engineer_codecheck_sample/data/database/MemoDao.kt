@@ -1,4 +1,4 @@
-package `fun`.picks.android_engineer_codecheck_sample.data.database.dao
+package `fun`.picks.android_engineer_codecheck_sample.data.database
 
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import androidx.room.Dao

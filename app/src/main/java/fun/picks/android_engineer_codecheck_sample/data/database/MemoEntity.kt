@@ -1,4 +1,4 @@
-package `fun`.picks.android_engineer_codecheck_sample.data.database.entity
+package `fun`.picks.android_engineer_codecheck_sample.data.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
