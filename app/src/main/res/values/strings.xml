@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">android-engineer-codecheck-sample</string>
+    <string name="error_occurred">エラーが起きました</string>
 </resources>
