@@ -9,7 +9,7 @@ class MemoRepositoryImpl(databaseProvider: DatabaseProvider) : MemoRepository {
     private val database = databaseProvider.get()
 
     override suspend fun getAllMemo(): List<Memo> = withContext(Dispatchers.IO) {
-        database.memoDao().getAll()
+        database.memoDao().getAll().map { it.toMemo() }
     }
 
     override suspend fun insertAllMemo(vararg memos: Memo) = withContext(Dispatchers.IO) {

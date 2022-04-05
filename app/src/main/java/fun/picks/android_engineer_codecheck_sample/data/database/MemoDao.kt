@@ -8,7 +8,7 @@ import androidx.room.Query
 @Dao
 interface MemoDao {
     @Query("SELECT * FROM memo")
-    fun getAll(): List<Memo>
+    fun getAll(): List<MemoEntity>
 
     @Insert
     fun insertAll(vararg memos: Memo)
