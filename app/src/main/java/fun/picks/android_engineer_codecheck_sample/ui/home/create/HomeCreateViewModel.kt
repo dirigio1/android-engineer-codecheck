@@ -3,6 +3,7 @@ package `fun`.picks.android_engineer_codecheck_sample.ui.home.create
 import `fun`.picks.android_engineer_codecheck_sample.R
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
+import `fun`.picks.android_engineer_codecheck_sample.ui.home.util.ViewModelFactory
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -46,5 +47,11 @@ class HomeCreateViewModel(
                 _errorLD.value = R.string.error_occurred
             }
         }
+    }
+
+    class HomeCreateViewModelFactory(
+        private val memoRepository: MemoRepository
+    ) : ViewModelFactory<HomeCreateViewModel> {
+        override fun create() = HomeCreateViewModel(memoRepository)
     }
 }
