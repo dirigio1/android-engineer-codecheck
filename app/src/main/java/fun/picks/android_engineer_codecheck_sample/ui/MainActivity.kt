@@ -1,5 +1,6 @@
-package `fun`.picks.android_engineer_codecheck_sample
+package `fun`.picks.android_engineer_codecheck_sample.ui
 
+import `fun`.picks.android_engineer_codecheck_sample.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
