@@ -1,6 +1,7 @@
 package `fun`.picks.android_engineer_codecheck_sample.data.repository
 
 import `fun`.picks.android_engineer_codecheck_sample.data.database.DatabaseProvider
+import `fun`.picks.android_engineer_codecheck_sample.data.database.MemoEntity.Companion.turnIntoMemoEntity
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -13,6 +14,7 @@ class MemoRepositoryImpl(databaseProvider: DatabaseProvider) : MemoRepository {
     }
 
     override suspend fun insertAllMemo(vararg memos: Memo) = withContext(Dispatchers.IO) {
-        database.memoDao().insertAll(memos = memos)
+        val entityArray = memos.map { turnIntoMemoEntity(it) }.toTypedArray()
+        database.memoDao().insertAll(memos = entityArray)
     }
 }

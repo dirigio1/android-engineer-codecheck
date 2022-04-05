@@ -11,5 +11,5 @@ interface MemoDao {
     fun getAll(): List<MemoEntity>
 
     @Insert
-    fun insertAll(vararg memos: Memo)
+    fun insertAll(vararg memos: MemoEntity)
 }
