@@ -6,9 +6,10 @@ import `fun`.picks.android_engineer_codecheck_sample.ui.home.create.HomeCreateFr
 import `fun`.picks.android_engineer_codecheck_sample.ui.home.list.HomeListFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.lang.IllegalStateException
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), ScreenTransition {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -39,4 +40,18 @@ class HomeActivity : AppCompatActivity() {
             return@setOnItemSelectedListener true
         }
     }
+
+    override fun toHomeListFragment() {
+        val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
+        bottomNavView.selectedItemId = R.id.list
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, HomeListFragment.newInstance())
+            .commit()
+    }
+}
+
+interface ScreenTransition {
+    fun toHomeListFragment()
 }

@@ -33,8 +33,12 @@ class HomeCreateViewModel(
         titleText: String,
         descriptionText: String
     ) {
-        _titleErrorLD.value = titleText.isBlank()
-        _descriptionErrorLD.value = descriptionText.isBlank()
+        val isTitleBlank = titleText.isBlank()
+        val isDescriptionBlank = descriptionText.isBlank()
+
+        _titleErrorLD.value = isTitleBlank
+        _descriptionErrorLD.value = isDescriptionBlank
+        if (isTitleBlank || isDescriptionBlank) return
 
         viewModelScope.launch {
             runCatching {

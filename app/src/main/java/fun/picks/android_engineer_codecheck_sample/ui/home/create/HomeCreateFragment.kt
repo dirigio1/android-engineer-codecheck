@@ -5,6 +5,7 @@ import `fun`.picks.android_engineer_codecheck_sample.R
 import `fun`.picks.android_engineer_codecheck_sample.databinding.FragmentHomeCreateBinding
 import `fun`.picks.android_engineer_codecheck_sample.di.AppContainer
 import `fun`.picks.android_engineer_codecheck_sample.di.HomeCreateContainer
+import `fun`.picks.android_engineer_codecheck_sample.ui.home.ScreenTransition
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -82,7 +83,7 @@ class HomeCreateFragment : Fragment(R.layout.fragment_home_create) {
     private fun observeCreateSuccessLD() {
         viewModel.createSuccessLD.observe(viewLifecycleOwner) {
             if (it == true) {
-                //ToDo 一覧画面に戻る導線実装
+                (requireActivity() as? ScreenTransition)?.toHomeListFragment()
             }
         }
     }
