@@ -7,7 +7,7 @@
 
 本アプリはメモを端末に保存して管理するアプリです。
 
-https://user-images.githubusercontent.com/77588574/161899968-442030fa-bd47-4c40-9964-97cd038be70c.mov
+https://user-images.githubusercontent.com/77588574/161916835-b55b3a0c-822e-4248-93d7-37210f6a3941.mov
 
 ## 環境
 - IDE : Android Studio Bumblebee | 2021.1.1 Patch 2
