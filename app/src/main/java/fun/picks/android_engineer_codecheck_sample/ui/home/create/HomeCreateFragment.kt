@@ -46,8 +46,8 @@ class HomeCreateFragment : Fragment(R.layout.fragment_home_create) {
     private fun setupButton(binding: FragmentHomeCreateBinding) {
         binding.createButton.setOnClickListener {
             viewModel.onClickCreateButton(
-                titleText = binding.titleEditText.text.toString(),
-                descriptionText = binding.descriptionEditText.text.toString()
+                titleText = binding.titleTextInputEditText.text.toString(),
+                descriptionText = binding.descriptionTextInputEditText.text.toString()
             )
         }
     }
@@ -55,7 +55,7 @@ class HomeCreateFragment : Fragment(R.layout.fragment_home_create) {
     private fun observeTitleErrorLD(binding: FragmentHomeCreateBinding) {
         viewModel.titleErrorLD.observe(viewLifecycleOwner) { errorOccurred ->
             when (errorOccurred) {
-                true -> binding.titleEditText.error = requireContext().getString(R.string.please_input)
+                true -> binding.titleTextInputLayout.error = requireContext().getString(R.string.please_input)
                 else -> return@observe
             }
         }
@@ -64,7 +64,7 @@ class HomeCreateFragment : Fragment(R.layout.fragment_home_create) {
     private fun observeDescriptionErrorLD(binding: FragmentHomeCreateBinding) {
         viewModel.descriptionErrorLD.observe(viewLifecycleOwner) { errorOccurred ->
             when (errorOccurred) {
-                true -> binding.descriptionEditText.error = requireContext().getString(R.string.please_input)
+                true -> binding.descriptionTextInputLayout.error = requireContext().getString(R.string.please_input)
                 else -> return@observe
             }
         }
