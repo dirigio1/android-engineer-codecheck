@@ -131,8 +131,11 @@ class HomeListFragment : Fragment(R.layout.fragment_home_list) {
 
         fun bind(item: HomeListViewModel.HomeListUiModel.MemoItem) {
             binding.titleText.text = item.memo.title
+            binding.timeText.text = unixTimeToString(
+                dateFormat = "yyyy/M/d H:m",
+                unixTime = item.memo.createdUnixTime
+            )
             binding.descriptionText.text = item.memo.description
-            binding.dateText.text = unixTimeToString(item.memo.createdUnixTime)
         }
     }
 
