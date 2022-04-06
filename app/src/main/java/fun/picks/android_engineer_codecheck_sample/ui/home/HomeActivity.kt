@@ -18,6 +18,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavigationView(binding: ActivityHomeBinding) {
+        val primaryFragment = HomeListFragment.newInstance()
+        supportFragmentManager
+            .beginTransaction()
+            .add(binding.fragmentContainer.id, primaryFragment)
+            .commit()
+
         binding.bottomNavigationView.setOnItemSelectedListener {
             val nextFragment = when (it.itemId) {
                 R.id.list -> HomeListFragment.newInstance()
