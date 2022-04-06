@@ -1,1 +1,25 @@
-# android-engineer-codecheck
+# DIRIGIO.inc Androidエンジニアコードチェック課題
+
+## 概要
+下記の説明に従って課題を取り組んでください
+
+## アプリ仕様
+
+本アプリはメモを端末に保存して管理するアプリです。
+
+https://user-images.githubusercontent.com/77588574/161899968-442030fa-bd47-4c40-9964-97cd038be70c.mov
+
+## 環境
+- IDE : Android Studio Bumblebee | 2021.1.1 Patch 2
+- Kotlin : 1.6.20
+- Java : 11
+- Gradle : 7.1.2
+- minSdk : 26
+- targetSdk : 31
+
+## 動作
+1. メモを一覧表示
+2. メモを追加して保存
+
+## 課題取り組み方法
+Issuesを確認した上、本プロジェクトを[Duplicateして](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository)ください。(Forkせずプライベートリポジトリにしてください。)。今後のコミットはご自身のリポジトリでおこなってください。
