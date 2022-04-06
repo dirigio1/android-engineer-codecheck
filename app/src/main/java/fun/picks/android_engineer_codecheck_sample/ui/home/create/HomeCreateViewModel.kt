@@ -3,7 +3,7 @@ package `fun`.picks.android_engineer_codecheck_sample.ui.home.create
 import `fun`.picks.android_engineer_codecheck_sample.R
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
-import `fun`.picks.android_engineer_codecheck_sample.ui.home.util.ViewModelFactory
+import `fun`.picks.android_engineer_codecheck_sample.ui.util.ViewModelFactory
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

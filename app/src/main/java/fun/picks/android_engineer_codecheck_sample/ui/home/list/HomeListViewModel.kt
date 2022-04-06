@@ -3,7 +3,7 @@ package `fun`.picks.android_engineer_codecheck_sample.ui.home.list
 import `fun`.picks.android_engineer_codecheck_sample.R
 import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
-import `fun`.picks.android_engineer_codecheck_sample.ui.home.util.ViewModelFactory
+import `fun`.picks.android_engineer_codecheck_sample.ui.util.ViewModelFactory
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.PRIVATE
 import androidx.lifecycle.LiveData
@@ -15,8 +15,8 @@ import kotlinx.coroutines.launch
 class HomeListViewModel(
     private val memoRepository: MemoRepository
 ) : ViewModel() {
-    private val _uiModelLD = MutableLiveData<HomeListUiModel>(HomeListUiModel.Loading)
-    val uiModelLD: LiveData<HomeListUiModel>
+    private val _uiModelLD = MutableLiveData<List<HomeListUiModel>>(listOf(HomeListUiModel.Loading))
+    val uiModelLD: LiveData<List<HomeListUiModel>>
         get() = _uiModelLD
 
     private val _errorLD = MutableLiveData<Int>()
@@ -29,7 +29,7 @@ class HomeListViewModel(
     fun init() {
         viewModelScope.launch {
             runCatching {
-                _uiModelLD.value = HomeListUiModel.MemoItem(memoRepository.getAllMemo())
+                _uiModelLD.value = memoRepository.getAllMemo().map { HomeListUiModel.MemoItem(memo = it) }
             }.onFailure {
                 _errorLD.value = R.string.error_occurred
             }
@@ -37,7 +37,7 @@ class HomeListViewModel(
     }
 
     sealed class HomeListUiModel {
-        data class MemoItem(val memos: List<Memo>) : HomeListUiModel()
+        data class MemoItem(val memo: Memo) : HomeListUiModel()
         object Loading : HomeListUiModel()
     }
 
