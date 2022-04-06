@@ -23,3 +23,5 @@ https://user-images.githubusercontent.com/77588574/161899968-442030fa-bd47-4c40-
 
 ## 課題取り組み方法
 Issuesを確認した上、本プロジェクトを[Duplicateして](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository)ください。(Forkせずプライベートリポジトリにしてください。)。今後のコミットはご自身のリポジトリでおこなってください。
+
+必須タグがついているIssueについては必ず解決して、それ以外のものについては好きなものからできるところまでで良いので取り組んでください。またIssueにないが追加してみたい機能等あれば自分で好きなように実装してみてください。
