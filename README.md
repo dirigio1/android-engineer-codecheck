@@ -1,4 +1,4 @@
-# DIRIGIO.inc Androidエンジニアコードチェック課題
+# DIRIGIO Inc. Androidエンジニアコードチェック課題
 
 ## 概要
 下記の説明に従って課題を取り組んでください
