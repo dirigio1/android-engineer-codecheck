@@ -1,15 +1,15 @@
 package `fun`.picks.android_engineer_codecheck_sample.ui.home.list
 
-import `fun`.picks.android_engineer_codecheck_sample.R
-import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
-import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
-import `fun`.picks.android_engineer_codecheck_sample.ui.util.ViewModelFactory
 import androidx.annotation.VisibleForTesting
 import androidx.annotation.VisibleForTesting.PRIVATE
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import `fun`.picks.android_engineer_codecheck_sample.R
+import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
+import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
+import `fun`.picks.android_engineer_codecheck_sample.ui.util.ViewModelFactory
 import kotlinx.coroutines.launch
 
 class HomeListViewModel(

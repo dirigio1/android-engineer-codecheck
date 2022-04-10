@@ -1,11 +1,11 @@
 package `fun`.picks.android_engineer_codecheck_sample.di
 
+import android.app.Application
 import `fun`.picks.android_engineer_codecheck_sample.data.database.DatabaseProvider
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepository
 import `fun`.picks.android_engineer_codecheck_sample.data.repository.MemoRepositoryImpl
 import `fun`.picks.android_engineer_codecheck_sample.ui.home.create.HomeCreateViewModel
 import `fun`.picks.android_engineer_codecheck_sample.ui.home.list.HomeListViewModel
-import android.app.Application
 
 class AppContainer(application: Application) {
     private val databaseProvider = DatabaseProvider(application)

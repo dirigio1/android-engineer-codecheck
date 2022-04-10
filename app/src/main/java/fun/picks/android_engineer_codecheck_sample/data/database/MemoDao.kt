@@ -1,6 +1,5 @@
 package `fun`.picks.android_engineer_codecheck_sample.data.database
 
-import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query

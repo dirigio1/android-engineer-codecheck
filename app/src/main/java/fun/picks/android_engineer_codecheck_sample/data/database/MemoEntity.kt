@@ -1,9 +1,9 @@
 package `fun`.picks.android_engineer_codecheck_sample.data.database
 
-import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import `fun`.picks.android_engineer_codecheck_sample.data.model.Memo
 
 @Entity(tableName = "memo")
 data class MemoEntity(
