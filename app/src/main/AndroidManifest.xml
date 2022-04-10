@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidengineercodechecksample"
-        android:name=".App">
+        android:name=".di.App">
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true">

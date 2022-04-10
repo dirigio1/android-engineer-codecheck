@@ -1,13 +1,5 @@
 package `fun`.picks.android_engineer_codecheck_sample.ui.home.list
 
-import `fun`.picks.android_engineer_codecheck_sample.App
-import `fun`.picks.android_engineer_codecheck_sample.R
-import `fun`.picks.android_engineer_codecheck_sample.databinding.FragmentHomeListBinding
-import `fun`.picks.android_engineer_codecheck_sample.databinding.ZHomeListItemCellBinding
-import `fun`.picks.android_engineer_codecheck_sample.databinding.ZProgressLayoutBinding
-import `fun`.picks.android_engineer_codecheck_sample.di.AppContainer
-import `fun`.picks.android_engineer_codecheck_sample.di.HomeListContainer
-import `fun`.picks.android_engineer_codecheck_sample.ui.util.unixTimeToString
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import `fun`.picks.android_engineer_codecheck_sample.R
+import `fun`.picks.android_engineer_codecheck_sample.databinding.FragmentHomeListBinding
+import `fun`.picks.android_engineer_codecheck_sample.databinding.ZHomeListItemCellBinding
+import `fun`.picks.android_engineer_codecheck_sample.databinding.ZProgressLayoutBinding
+import `fun`.picks.android_engineer_codecheck_sample.di.App
+import `fun`.picks.android_engineer_codecheck_sample.di.AppContainer
+import `fun`.picks.android_engineer_codecheck_sample.di.HomeListContainer
+import `fun`.picks.android_engineer_codecheck_sample.ui.util.unixTimeToString
 import java.lang.IllegalStateException
 
 class HomeListFragment : Fragment(R.layout.fragment_home_list) {
@@ -76,7 +76,7 @@ class HomeListFragment : Fragment(R.layout.fragment_home_list) {
         }
     }
 
-    private class HomeListAdapter: ListAdapter<HomeListViewModel.HomeListUiModel, BaseHomeListViewHolder>(DiffUtilCallback()) {
+    private class HomeListAdapter : ListAdapter<HomeListViewModel.HomeListUiModel, BaseHomeListViewHolder>(DiffUtilCallback()) {
         override fun getItemViewType(position: Int) = when (currentList[position]) {
             is HomeListViewModel.HomeListUiModel.Loading -> ViewType.PROGRESS.ordinal
             is HomeListViewModel.HomeListUiModel.MemoItem -> ViewType.ITEM.ordinal

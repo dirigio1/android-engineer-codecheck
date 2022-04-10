@@ -1,15 +1,15 @@
 package `fun`.picks.android_engineer_codecheck_sample.ui.home.create
 
-import `fun`.picks.android_engineer_codecheck_sample.App
-import `fun`.picks.android_engineer_codecheck_sample.R
-import `fun`.picks.android_engineer_codecheck_sample.databinding.FragmentHomeCreateBinding
-import `fun`.picks.android_engineer_codecheck_sample.di.AppContainer
-import `fun`.picks.android_engineer_codecheck_sample.di.HomeCreateContainer
-import `fun`.picks.android_engineer_codecheck_sample.ui.home.ScreenTransition
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import `fun`.picks.android_engineer_codecheck_sample.R
+import `fun`.picks.android_engineer_codecheck_sample.databinding.FragmentHomeCreateBinding
+import `fun`.picks.android_engineer_codecheck_sample.di.App
+import `fun`.picks.android_engineer_codecheck_sample.di.AppContainer
+import `fun`.picks.android_engineer_codecheck_sample.di.HomeCreateContainer
+import `fun`.picks.android_engineer_codecheck_sample.ui.home.ScreenTransition
 
 class HomeCreateFragment : Fragment(R.layout.fragment_home_create) {
     companion object {
